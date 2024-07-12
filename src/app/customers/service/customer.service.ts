@@ -7,8 +7,8 @@ import { Observable } from 'rxjs';
 export class CustomerService {
   private baseUrl='http://localhost:3000'
   constructor(private _HttpClient:HttpClient) { }
-  getAllCustomersData():Observable<any>{
-    return this._HttpClient.get(`${this.baseUrl}/customers`)
+  getAllCustomersData(param:any):Observable<any>{
+    return this._HttpClient.get(`${this.baseUrl}/customers`,{params:param})
   }
   getTransactionsData():Observable<any>{
     return this._HttpClient.get(`${this.baseUrl}/transactions`)
