@@ -1,0 +1,30 @@
+<section class="customer">
+    <div class="container-fluid">
+        <div class="row ">
+            <div class="">
+                <div class="text text-primary">
+                    <h1>Customers</h1>
+                </div>
+                <div class="table">
+                    <table class="table">
+                        <thead class="">
+                            <tr class="bg-warning">
+                                <th class="col-6 bg-warning">ID</th>
+                                <th class="col-6 bg-warning">Name</th>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of tableOfCustomers">
+                                <td class="">{{item.id}}</td>
+                                <td>{{item.name}}</td>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</section>
