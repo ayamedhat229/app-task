@@ -7,13 +7,15 @@
                 </div>
                 <input matInput class="form-control w-75 mb-3 mt-3" placeholder="Please write your full name..." type="text" [(ngModel)]="searchKey" (keyup.enter)="onGetCustomersData()">
  
+
+
                 <div class="table">
                     <table class="table">
                         <thead class="">
                             <tr class="bg-warning">
                                 <th class="col-3 bg-primary text-white">ID</th>
                                 <th class="col-3 bg-primary text-white">Name</th>
-                                <th class="col-3 bg-primary text-white">Transaction Count</th>
+                            
                                 <th class="col-3 bg-primary text-white">Total Amount</th>
                              
                                
@@ -23,7 +25,7 @@
                             <tr *ngFor="let item of customersWithTransactions">
                                 <td class="">{{item.id}}</td>
                                 <td class="">{{item.name}}</td>
-                                <td class="">{{item.transactionCount}}</td>
+                              
                                 <td class="">{{item.totalAmount}}</td>
                              
                               </tr>
@@ -31,9 +33,9 @@
                     </table>
                 </div>
             </div>
-            <div id="chartUser" class="bg-white col-5  shadow-sm chart border p-5 mb-3  rounded-3">
-                <h2 class="text-gray">Customers</h2>
-                  <canvas id="userChart" class="userChart">{{newChart}}</canvas>
+            <div id="chartUser" class="bg-white w-100  shadow-sm chart border p-5 mb-3  rounded-3">
+                <h2 class="text-primary">Customers</h2>
+                <canvas id="userChart"></canvas>
                 </div>
         </div>
         </div>
